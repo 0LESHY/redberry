@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>Private info</title>
+  </head>
+  <body>
+    <div id="hed">პირადი ინფო</div>
+    <div id="liner"></div>
+    <div id="paper">
+      <img id="logoer" src="images/image4.png"></img>
+    </div>
+    <a href="index.html">
+      <button >
+        <div id="ball"><img src="images/image3.png" /></div>
+      </button>
+    </a>
+    <div id="pager"><b>1/3</b></div>
+    <div id="nam">
+      <div id="ty">სახელი</div>
+      <input type="text" pattern="[ა-ჰ].{1,}" class="inp" placeholder="სახელი" onchange="validator(this.value)"/>
+      <div id="dis">მინიმუმ 2 ასო, ქართული ასოები</div>
+    </div>
+    <div id="lasnam">
+      <div id="ty">გვარი</div>
+      <input type="text" pattern="[ა-ჰ].{1,}" class="inp" placeholder="გვარი" />
+      <div id="dis">მინიმუმ 2 ასო, ქართული ასოები</div>
+    </div>
+    <div id="up"><b>პირადი ფოტოს ატვირთვა</b></div>
+    <button id="button1">ატვირთვა</button>
+    <div id="abus">
+      <div id="abus1"><b>ჩემ შესახებ (არასავალდებულო)</b></div>
+      <textarea id="inp1" placeholder="ზოგადი ინფო შენ შესახებ"></textarea>
+    </div>
+    <div class="fost">
+      <div id="el"><b>ელ.ფოსტა</b></div>
+      <input type="email"   id="inp2" placeholder="example@redberry.ge" />
+      <div id="des">უნდა მთავრდებოდეს @redberry.ge-ით</div>
+    </div>
+    <div class="fost1">
+      <div id="el"><b>მობილურის ნომერი</b></div>
+      <input id="inp2" />
+      <div id="des">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</div>
+    </div>
+    <button id="buttonnext"><div id="fonter">შემდეგი</div></button>
+    
+
+  </body>
+</html>
