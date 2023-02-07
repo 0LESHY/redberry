@@ -7,7 +7,18 @@
   font-family: "Helvetica Neue";
   src: url("HelveticaNeue-01.ttf");
 }
-
+input {
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+textarea {
+  padding: 12px 20px;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
 body {
   background: #f9f9f9;
 }
@@ -32,10 +43,43 @@ input:placeholder-shown {
 #inp1:placeholder-shown {
   border-color: #bcbcbc;
 }
+#inp1:invalid {
+  border-color: #ef5050;
+}
+#inp3:invalid {
+  border-color: #ef5050;
+}
+#inp3:placeholder-shown {
+  border-color: #bcbcbc;
+}
+#inp3:valid {
+  border-color: #98e37e;
+  background: url("images/image5.png") no-repeat;
+  background-position: 762px;
+  background-size: 18px;
+  border-radius: 8px;
+}
 #inp2:invalid {
   border-color: #ef5050;
 }
-
+#inp2:placeholder-shown {
+  border-color: #bcbcbc;
+}
+#inp2:valid {
+  border-color: #98e37e;
+  background: url("images/image5.png") no-repeat;
+  background-position: 762px;
+  background-size: 18px;
+  border-radius: 8px;
+}
+#A {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 961.5px;
+  top: 742px;
+  visibility: hidden;
+}
 #checkmark {
   position: absolute;
   width: 18px;
@@ -164,6 +208,7 @@ input:placeholder-shown {
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+  margin: 1px;
 }
 #dis {
   width: 371px;
@@ -219,7 +264,41 @@ input:placeholder-shown {
 
   color: #1a1a1a;
 }
-#button1 {
+#upload_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 12px;
+  gap: 10px;
+  border-style: none;
+  border-radius: 4px;
+
+  position: absolute;
+  width: 107px;
+  height: 27px;
+  left: 401px;
+  top: 325px;
+
+  background: #0e80bf;
+  color: #ffffff;
+  cursor: pointer;
+}
+.PhotoUpload {
+  width: 69px;
+  height: 17px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -328,7 +407,8 @@ input:placeholder-shown {
   align-self: stretch;
   flex-grow: 0;
 }
-#inp2 {
+#inp2,
+#inp3 {
   box-sizing: border-box;
 
   width: 798px;
@@ -400,6 +480,11 @@ input:placeholder-shown {
   border-radius: 4px;
   border-style: none;
   justify-content: center;
+  cursor: pointer;
+}
+#buttonnext:hover {
+  background-color: #000000;
+  transition: 0.1s;
 }
 #fonter {
   width: 81px;
@@ -428,4 +513,15 @@ input:placeholder-shown {
   height: 32px;
   left: 78px;
   top: 994px;
+}
+#displayer {
+  position: absolute;
+  width: 246px;
+  height: 246px;
+  left: 501px;
+  top: 48px;
+
+  background: url(.jpg), #ffffff;
+  border-radius: 133px;
+  background-size: cover;
 }
