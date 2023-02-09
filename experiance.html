@@ -21,44 +21,47 @@
       </button>
     </a>
     <div id="pager"><b>2/3</b></div>
+
+
     <div id="tanamdeboba">
-      <div id="ty">თანამდებობა</div>
-      <input class="inpe" />
+      <div id="t1">თანამდებობა</div>
+      <input type ="text" pattern="[ა-ჰa-zA-Z].{1,}" id="inp5" placeholder="დეველოპერი, დიზაინერი, ა.შ." onchange="ValidateJob() "/>
       <div id="dis">მინიმუმ 2 სიმბოლო</div>
     </div>
+
+
+
     <div id="damsa">
-      <div id="ty">დამსაქმებელი</div>
-      <input class="inpe" />
+      <div id="t2">დამსაქმებელი</div>
+      <input type ="text" pattern="[ა-ჰa-zA-Z].{1,}" placeholder="დამსაქმებელი" onchange="ValidateHire()"" id="inp6" />
       <div id="dis">მინიმუმ 2 სიმბოლო</div>
     </div>
     
     <div id="dates">
-      <div><b>დაწყების რიცხვი</b></div>
-      <input type="date" class="chan" />
+      <div id="dawy"><b>დაწყების რიცხვი</b></div>
+      <input type="date" id="chan" onchange ="dateval1()" required />
     </div>
     <div id="dates1">
-      <div><b>დამთავრების რიცხვი</b></div>
-      <input type="date" class="chan" />
+      <div id="damt"><b>დამთავრების რიცხვი</b></div>
+      <input type="date" id="chan1" onchange ="dateval2()"  required />
     </div>
     
     <div id="agwera">
       <div id="abus1"><b>აღწერა</b></div>
-      <textarea id="inp1" ></textarea>
+      <textarea id="mokle" onchange="agwer()" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა" ></textarea>
     </div>
-
-
-
-
-
-
   
     <div id="bord"></div>
     <button id="extra"><div id="fonterer" >მეტი გამოცდილების დამატება</div></button>
-    <a href="education.html">
-      <button id="buttonnext"><div id="fonter">შემდეგი</div></button>
-    </a>
+  
+      <button id="buttonnext1" onclick="ValidateAl() "><div id="fonter">შემდეგი</div></button>
+  
     <a href="private_info.html">
       <button id="buttonpre"><div id="fonter">უკან</div></button>
     </a>
+
+    <img id="AA" src="images/image6.png">
+    <img id="BB" src="images/image6.png">
+    <script src="exp.js"></script>
   </body>
 </html>
