@@ -13,9 +13,16 @@
     <div id="paper">
       <img id="logoer" src="images/image4.png"></img>
       <div id="displayer"></div>
+      <output id="namer_out"></output>
+      <img id="EM" src="images/image7.png">
+      <output id="email_out"></output>
+      <img id="PH" src="images/image8.png">
+      <output id="phone_out"></output>
+      <output id="info_out"></output>
+      <output id="chem_se">ჩემ შესახებ</output>
     </div>
     <a href="index.html">
-      <button >
+      <button onclick="deleteItems()">
         <div id="ball"><img src="images/image3.png" /></div>
       </button>
     </a>
@@ -24,14 +31,14 @@
 
     <div id="nam">
       <div id="ty">სახელი</div>
-      <input type="text" pattern="[ა-ჰ].{1,}" id="inp" placeholder="სახელი" onchange="ValidateName()" />
+      <input type="text" pattern="[ა-ჰ].{1,}" id="inp" placeholder="სახელი" onkeyup="ValidateName()" />
       <div id="dis">მინიმუმ 2 ასო, ქართული ასოები</div>
     </div>
 
 
     <div id="lasnam">
       <div id="ty1">გვარი</div>
-      <input type="text" pattern="[ა-ჰ].{1,}" id="inp0" placeholder="გვარი" onchange="ValidateSurName()" />
+      <input type="text" pattern="[ა-ჰ].{1,}" id="inp0" placeholder="გვარი" onkeyup="ValidateSurName()" />
       <div id="dis">მინიმუმ 2 ასო, ქართული ასოები</div>
     </div>
 
@@ -43,8 +50,8 @@
 
 
     <div id="abus">
-      <div id="abus1"><b>ჩემ შესახებ (არასავალდებულო)</b></div>
-      <textarea id="inp1" placeholder="ზოგადი ინფო შენ შესახებ"></textarea>
+      <div id="abus1">ჩემ შესახებ (არასავალდებულო)</div>
+      <textarea id="inp1" placeholder="ზოგადი ინფო შენ შესახებ" onkeyup="shesaxeb()"></textarea>
     </div>
 
     <div class="fost">
@@ -52,7 +59,7 @@
       <input type="text"   id="inp2" 
       pattern="[a-zA-Z0-9._%+-]+@+redberry.ge"
       placeholder="example@redberry.ge"
-      onchange="ValidateEmail()" />
+      onkeyup="ValidateEmail()" />
       <div id="des">უნდა მთავრდებოდეს @redberry.ge-ით</div>
     </div>
     
@@ -65,7 +72,7 @@
         required
         pattern="[+]{1}[9]{2}[5]{1} [5]{1}[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}"
         placeholder="+995 5xx xx xx xx"
-        onchange="ValidatePhone()"/>
+        onkeyup="ValidatePhone()"/>
       </div>
       <div id="des">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</div>
     </div>

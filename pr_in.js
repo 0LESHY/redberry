@@ -17,58 +17,115 @@ image_input.addEventListener("change", function () {
 
 document.getElementById("displayer").style.backgroundImage =
   localStorage.getItem("Photo");
+document.getElementById("namer_out").innerHTML =
+  localStorage.getItem("LastName") + " " + localStorage.getItem("FirstName");
+document.getElementById("inp").value = localStorage.getItem("LastName");
+document.getElementById("inp0").value = localStorage.getItem("FirstName");
+document.getElementById("email_out").innerHTML = localStorage.getItem("E-Mail");
+document.getElementById("inp2").value = localStorage.getItem("E-Mail");
+document.getElementById("phone_out").innerHTML =
+  localStorage.getItem("Phone_Number");
+
+document.getElementById("inp1").value = localStorage.getItem("about_info");
+document.getElementById("info_out").innerHTML =
+  localStorage.getItem("about_info");
+document.getElementById("gamocdileba").style.visibility = "visible";
+document.getElementById("Job_out").innerHTML = pos_m[0] + "," + comp_m[0];
+document.getElementById("Date_out").innerHTML =
+  localStorage.getItem("date1") + " - " + localStorage.getItem("date2");
+document.getElementById("ag_out").innerHTML =
+  localStorage.getItem("samsaxuris_agwera");
+
+document.getElementById("inp3").value = localStorage.getItem("Phone_Number");
+function shesaxeb() {
+  localStorage.setItem("about_info", document.getElementById("inp1").value);
+  if (document.getElementById("inp1").value == "") {
+    document.getElementById("chem_se").style.visibility = "hidden";
+  } else {
+    document.getElementById("chem_se").style.visibility = "visible";
+  }
+  document.getElementById("info_out").innerHTML =
+    localStorage.getItem("about_info");
+}
+if (document.getElementById("inp1").value == "") {
+  document.getElementById("chem_se").style.visibility = "hidden";
+} else {
+  document.getElementById("chem_se").style.visibility = "visible";
+}
 
 function ValidatePhone() {
   var regx = /^\+995\s5\d{2}\s\d{2}\s\d{2}\s\d{2}$/;
   var phone = document.getElementById("inp3").value;
-
+  localStorage.setItem("Phone_Number", document.getElementById("inp3").value);
+  document.getElementById("phone_out").innerHTML =
+    localStorage.getItem("Phone_Number");
   if (regx.test(phone) === false) {
     document.getElementById("A").style.visibility = "visible";
     document.getElementById("pho").style.color = "#ef5050";
-    // document.getElementById("inp3").style.borderColor = "#ef5050";
   } else {
     document.getElementById("A").style.visibility = "hidden";
     document.getElementById("pho").style.color = "black";
   }
+  if (document.getElementById("inp3").value == "") {
+    document.getElementById("PH").style.visibility = "hidden";
+  } else {
+    document.getElementById("PH").style.visibility = "visible";
+  }
+}
+if (document.getElementById("inp3").value == "") {
+  document.getElementById("PH").style.visibility = "hidden";
+} else {
+  document.getElementById("PH").style.visibility = "visible";
 }
 
 function ValidateEmail() {
-  //var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@redberry.ge$/gm;
   var mail = document.getElementById("inp2").value;
-
+  localStorage.setItem("E-Mail", document.getElementById("inp2").value);
+  document.getElementById("email_out").innerHTML =
+    localStorage.getItem("E-Mail");
   if (regx.test(mail) === false) {
     document.getElementById("B").style.visibility = "visible";
     document.getElementById("el").style.color = "#ef5050";
-    // document.getElementById("inp2").style.borderColor = "#ef5050";
-    // document.querySelector('#button2').disabled = true;
   } else {
-    // document.querySelector("#button2").onclick = function () {
     document.getElementById("B").style.visibility = "hidden";
     document.getElementById("el").style.color = "black";
   }
+
+  if (document.getElementById("inp2").value == "") {
+    document.getElementById("EM").style.visibility = "hidden";
+  } else {
+    document.getElementById("EM").style.visibility = "visible";
+  }
+}
+if (document.getElementById("inp2").value == "") {
+  document.getElementById("EM").style.visibility = "hidden";
+} else {
+  document.getElementById("EM").style.visibility = "visible";
 }
 
 function ValidateName() {
   console.log("asasf");
   var regx = /[ა-ჰ]/;
   var Name = document.getElementById("inp").value;
-
+  localStorage.setItem("LastName", document.getElementById("inp").value);
+  document.getElementById("namer_out").innerHTML =
+    localStorage.getItem("LastName") + " " + localStorage.getItem("FirstName");
   if (regx.test(Name) === false || Name.length < 2) {
     document.getElementById("C").style.visibility = "visible";
     document.getElementById("ty").style.color = "#ef5050";
-    // document.getElementById("inp").style.borderColor = "#ef5050";
-    // document.getElementById("inp").style.borderColor = "#ef5050";
   } else {
     document.getElementById("C").style.visibility = "hidden";
     document.getElementById("ty").style.color = "black";
-    // document.getElementById("inp").style.borderColor = "#98e37e";
   }
 }
 
 function ValidateSurName() {
   var regx = /[ა-ჰ]/;
   var surname = document.getElementById("inp0").value;
+  localStorage.setItem("FirstName", document.getElementById("inp0").value);
+  document.getElementById("namer_out").innerHTML =
+    localStorage.getItem("LastName") + " " + localStorage.getItem("FirstName");
 
   if (regx.test(surname) === false || surname.length < 2) {
     document.getElementById("D").style.visibility = "visible";
@@ -137,4 +194,7 @@ function ValidateAll() {
   } else {
     location.href = "experiance.html";
   }
+}
+function deleteItems() {
+  localStorage.clear();
 }

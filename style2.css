@@ -634,3 +634,102 @@ body {
   border-radius: 133px;
   background-size: cover;
 }
+#namer_out {
+  position: absolute;
+  width: 350px;
+  height: 42px;
+  left: 80px;
+  top: 68px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 42px;
+  /* identical to box height */
+
+  color: #f93b1d;
+}
+#email_out {
+  position: absolute;
+  width: 179px;
+  height: 21px;
+  left: 111px;
+  top: 127px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  /* off black */
+
+  color: #1a1a1a;
+}
+#phone_out {
+  position: absolute;
+  width: 151px;
+  height: 21px;
+  left: 111px;
+  top: 158px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+
+  /* off black */
+
+  color: #1a1a1a;
+}
+#info_out {
+  position: absolute;
+  width: 432px;
+  height: 72px;
+  left: 80px;
+  top: 250px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 138% */
+
+  text-transform: lowercase;
+
+  color: #000000;
+}
+#chem_se {
+  position: absolute;
+  width: 118px;
+  height: 22px;
+  left: 80px;
+  top: 213px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #f93b1d;
+  visibility: hidden;
+}
+#EM {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 81px;
+  top: 129px;
+}
+#PH {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 81px;
+  top: 159px;
+}

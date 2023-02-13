@@ -14,41 +14,76 @@
     <div id="liner"></div>
     <div id="paper">
       <img id="logoer" src="images/image4.png"></img>
+      <div id="displayer"></div>
+      <output id="namer_out"></output>
+      <img id="EM" src="images/image7.png">
+      <output id="email_out"></output>
+      <img id="PH" src="images/image8.png">
+      <output id="phone_out"></output>
+      <output id="chem_see">ჩემ შესახებ</output>
+       <output id="info_out"></output>
+      <div id="Line1"></div>
+      <output id="gamocdileba">გამოცდილება</output>
+    <output id="Job_out"></output>
+    <output id="Date_out"></output>
+    <output id="ag_out"></output>
+    <div id="Line2"></div>
+    <output id="saswa"></output>
+    <output id="dam_out"></output>
+    <output id="swav_agwera"></output>
+      
     </div>
     <a href="index.html">
-      <button>
+      <button onclick="deleteItems()">
         <div id="ball"><img src="images/image3.png" /></div>
       </button>
     </a>
+
     <div id="pager"><b>3/3</b></div>
-    <div id="tanamdeboba">
-      <div id="ty">სასწავლებელი</div>
-      <input class="inpe" placeholder="სასწავლებელი"/>
+
+    <!-- <div id="saswavlebeli">
+      <div id="tt1">სასწავლებელი</div>
+      <input id="inpe" placeholder="სასწავლებელი"/>
       <div id="dis">მინიმუმ 2 სიმბოლო</div>
+    </div> -->
+    <div class="grider">
+      <div id="saswavlebeli">
+      <div id="tt1" class="tt11"><b>სასწავლებელი</b></div>
+      <div class="komm">
+      <input type ="text" pattern="[ა-ჰa-zA-Z].{1,}" id="inp10" class="inp10" placeholder="სასწავლებელი" onkeyup="out1()" />
+      <img class="AAA"  src="images/image6.png">
+      </div>
+      <div id="dissss">მინიმუმ 2 სიმბოლო</div>
     </div>
-    
-    
-    <div id="robo">
+
+<div class="star">
+   <div id="robo">
       <div><b>ხარისხი</b></div>
-      <select id="dro">
+      <select id="dro" onchange="out2()">
         <option value="">აირჩიეთ ხარისხი</option>
       </select>
     </div>
+
     <div id="robo1">
       <div><b>დამთავრების რიცხვი</b></div>
-      <input type="date" class="chan" />
+      <input type="date" class="chan2" id="chan2" onchange="out3()" />
     </div>
-    
-    <div id="agwera1">
+</div>
+<div id="agwera1">
       <div id="abus1"><b>აღწერა</b></div>
-      <textarea id="inp1" placeholder="განათლების აღწერა"></textarea>
+      <textarea id="inp11" placeholder="განათლების აღწერა" onkeyup="out4()"></textarea>
     </div>
-    <div id="bord1"></div>
-    <button id="extra1"><div id="fonterer" >სხვა სასწავლებლის დამატება</div></button>
+<div id="bord1"></div>
+
+    </div>
+
+    <div>
+      <button id="extra1"><div id="fonterer" >სხვა სასწავლებლის დამატება</div></button>
     <a href="experiance.html">
-      <button id="buttonpre"><div id="fonter">უკან</div></button>
+      <button id="buttonpre2"><div id="fonter">უკან</div></button>
     </a>
-    <button id="buttonnext"><div id="fonter1">დასრულება</div></button>
+    <button id="buttonfinish"><div id="fonter1">დასრულება</div></button> -->
+    </div>
 
     <script src="main.js"></script>
   </body>

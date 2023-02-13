@@ -14,54 +14,82 @@
     <div id="liner"></div>
     <div id="paper">
       <img id="logoer" src="images/image4.png"></img>
+      <div id="displayer"></div>
+      <output id="namer_out"></output>
+      <img id="EM" src="images/image7.png">
+      <output id="email_out"></output>
+      <img id="PH" src="images/image8.png">
+      <output id="phone_out"></output>
+      <output id="chem_see">ჩემ შესახებ</output> 
+     
+        <output id="info_out"></output>
+      <div id="Line1"></div>
+
+      
+      <output id="gamocdileba">გამოცდილება</output>
+    <output id="Job_out"></output>
+    <output id="Date_out"></output>
+    <output id="ag_out"></output>
     </div>
+    
     <a href="index.html">
-      <button >
+      <button onclick="deleteItems()">
         <div id="ball"><img src="images/image3.png" /></div>
       </button>
     </a>
     <div id="pager"><b>2/3</b></div>
 
-
+<div class="CityLights">
     <div id="tanamdeboba">
-      <div id="t1">თანამდებობა</div>
-      <input type ="text" pattern="[ა-ჰa-zA-Z].{1,}" id="inp5" placeholder="დეველოპერი, დიზაინერი, ა.შ." onchange="ValidateJob() "/>
+      <div id="t1" class="t1">თანამდებობა</div>
+      <div class="TheGreatEscape">
+      <input type ="text" pattern="[ა-ჰa-zA-Z].{1,}" id="inp5" class="inp5" placeholder="დეველოპერი, დიზაინერი, ა.შ." onkeyup="ValidateJob(0),outer(0) "/>
+      <img class="AA"  src="images/image6.png">
+      </div>
+      <div id="dis">მინიმუმ 2 სიმბოლო</div>
+    </div>
+
+  <div id="damsa">
+      <div id="t2" class="t2">დამსაქმებელი</div>
+      <div class="TheKid">
+        <input type ="text" pattern="[ა-ჰa-zA-Z].{1,}" id="inp6" class="inp6" placeholder="დამსაქმებელი" onkeyup="ValidateHire(0),outer1(0)" />
+        <img class="BB" src="images/image6.png"> 
+      </div>
+      
       <div id="dis">მინიმუმ 2 სიმბოლო</div>
     </div>
 
 
-
-    <div id="damsa">
-      <div id="t2">დამსაქმებელი</div>
-      <input type ="text" pattern="[ა-ჰa-zA-Z].{1,}" placeholder="დამსაქმებელი" onchange="ValidateHire()"" id="inp6" />
-      <div id="dis">მინიმუმ 2 სიმბოლო</div>
-    </div>
-    
-    <div id="dates">
-      <div id="dawy"><b>დაწყების რიცხვი</b></div>
-      <input type="date" id="chan" onchange ="dateval1()" required />
+    <div class="ModernTimes">
+      <div id="dates">
+      <div id="dawy" class = "dawy"><b>დაწყების რიცხვი</b></div>
+      <input type="date" id="chan" class="chan" onchange ="dateval1(0),dater(),outer2(0)" required />
     </div>
     <div id="dates1">
-      <div id="damt"><b>დამთავრების რიცხვი</b></div>
-      <input type="date" id="chan1" onchange ="dateval2()"  required />
+      <div id="damt" class="damt"><b>დამთავრების რიცხვი</b></div>
+      <input type="date" id="chan1" class="chan1" onchange ="dateval2(0),dater()"  required />
+    </div>
     </div>
     
-    <div id="agwera">
-      <div id="abus1"><b>აღწერა</b></div>
-      <textarea id="mokle" onchange="agwer()" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა" ></textarea>
-    </div>
-  
+    
+    <div id="agwera" >
+      <div id="abus1" class="abus1" ><b>აღწერა</b></div>
+      <textarea id="mokle" class="mokle" onkeyup="agwer(0)" placeholder="როლი თანამდებობაზე და ზოგადი აღწერა" ></textarea>
+    </div> 
     <div id="bord"></div>
-    <button id="extra"><div id="fonterer" >მეტი გამოცდილების დამატება</div></button>
+  </div>
   
-      <button id="buttonnext1" onclick="ValidateAl() "><div id="fonter">შემდეგი</div></button>
   
-    <a href="private_info.html">
-      <button id="buttonpre"><div id="fonter">უკან</div></button>
-    </a>
+  
+  <div>
+  <button id="extra" onclick="AddMore()"><div id="fonterer" >მეტი გამოცდილების დამატება</div></button>
+  <button id="buttonnext1" onclick="ValidateAl2()"><div id="fonter">შემდეგი</div></button>
+  <a href="private_info.html">
+    <button id="buttonpre"><div id="fonter">უკან</div></button>
+  </a>
+  </div>
 
-    <img id="AA" src="images/image6.png">
-    <img id="BB" src="images/image6.png">
-    <script src="exp.js"></script>
+    <script src="exp.js">
+    </script>
   </body>
 </html>
